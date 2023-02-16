@@ -35,23 +35,22 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    int i=0,j=0;
     return Scaffold(
       appBar: AppBar(
         title: Text('hii'),
       ),
-      body:Center(child: Container(
-          width: 150,
-          height: 150,
-          color: Colors.blue,
-          child:const Center( child: Text("Hello Developers",style: TextStyle(
-            fontSize:25,
-            fontFamily: "Times new roman",
-            color: Color.fromRGBO(255,255,51,10),
-            fontWeight:FontWeight.w800,
-            backgroundColor: Colors.red  
-          ),)),
-        )
-      ) // This trailing comma makes auto-formatting nicer for build methods.
+      body: TextButton(child: Text("yo"),
+      onPressed: (){
+        print("Text button tapped ${i}");
+        i++;
+      },
+      onLongPress: (){
+        
+        print("Text button long pressed ${j}");
+        j++;
+      },
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
