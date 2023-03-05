@@ -46,7 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
         Column(children: [
          Text("Hello Devs 1",style: Theme.of(context).textTheme.displayLarge),
          Text("Hello Devs 2",style: Theme.of(context).textTheme.displayMedium),
-         Text("Hello Devs 3",style: Theme.of(context).textTheme.displayLarge),
+         Text("Hello Devs 3",style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.red)),//copyWith helps to extend the 
+                                                                                            //predefined theme and add any extra style to widget
          Text("Hello Devs 4",style: Theme.of(context).textTheme.displayMedium),
 
         ],
